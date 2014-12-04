@@ -41,3 +41,12 @@ if (!$user->optimisticSave(){
     //whoops, there was someone faster.
 }
 ```
+
+### Note for Versionable
+
+This behavior is compatible to versionable-behavior. Make sure `optimistic_locking` behavior is loaded before `versionable`.
+ 
+```xml
+<behavior name="optimistic_locking" />
+<behavior name="versionable" />
+```
